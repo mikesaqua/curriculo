@@ -1,0 +1,212 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('background.jpg'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa a imagem para rolar com a página */
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.85); /* Fundo preto mais escuro (85% de opacidade) */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 120px; /* Tamanho da foto */
+    height: 120px;
+    border-radius: 50%; /* Foto redonda */
+    border: 3px solid #fff; /* Borda branca */
+    margin-right: 20px; /* Espaço entre a foto e o texto */
+}
+
+.header-text {
+    flex: 1;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.05); /* Efeito de zoom no nome */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.whatsapp-link {
+    color: #25d366; /* Cor verde do WhatsApp */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.whatsapp-link:hover {
+    color: #128c7e; /* Cor mais escura ao passar o mouse */
+}
+
+.whatsapp-link::after {
+    content: "Clique para falar comigo"; /* Mensagem que aparece ao passar o mouse */
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8); /* Fundo escuro para a mensagem */
+    color: #fff; /* Cor do texto da mensagem */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    bottom: 100%; /* Posiciona a mensagem acima do link */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease;
+}
+
+.whatsapp-link:hover::after {
+    opacity: 1; /* Torna a mensagem visível ao passar o mouse */
+}
+
+section {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02); /* Efeito de zoom nas seções */
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #ffcc00; /* Mudança de cor ao passar o mouse */
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ddd;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.03); /* Efeito de zoom nos itens da lista */
+    background: rgba(255, 255, 255, 0.2); /* Fundo mais claro ao passar o mouse */
+}
+
+.job {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job:hover {
+    transform: scale(1.03); /* Efeito de zoom nas experiências profissionais */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+.job h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.job h3:hover {
+    color: #ffcc00; /* Mudança de cor ao passar o mouse */
+}
+
+.job p {
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.additional-info ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #ddd;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.additional-info ul li:hover {
+    transform: scale(1.03); /* Efeito de zoom nas informações adicionais */
+    background: rgba(255, 255, 255, 0.2); /* Fundo mais claro ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .job h3 {
+        font-size: 1.2rem;
+    }
+}
