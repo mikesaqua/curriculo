@@ -109,6 +109,7 @@ header p {
     display: flex;
     gap: 10px;
     margin-top: 15px;
+    align-items: center; /* Alinha os itens verticalmente */
 }
 
 .menu-item {
@@ -130,6 +131,21 @@ header p {
 
 .menu-item.linkedin {
     background: linear-gradient(135deg, #0077b5, #00a0dc); /* Gradiente do LinkedIn */
+}
+
+.menu-item.whatsapp {
+    background: transparent; /* Remove o fundo do botão do WhatsApp */
+    padding: 0; /* Remove o padding para o ícone ficar alinhado */
+}
+
+.whatsapp-icon {
+    width: 110px; /* Tamanho do ícone do WhatsApp */
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Efeito de zoom no ícone */
 }
 
 /* Seções */
