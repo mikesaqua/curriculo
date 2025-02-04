@@ -113,7 +113,7 @@ header p {
 }
 
 .menu-item {
-    background: linear-gradient(135deg, #25d366, #128c7e); /* Gradiente do WhatsApp */
+    background: linear-gradient(135deg, #ff4d4d, #cc0000); /* Gradiente vermelho */
     color: #fff;
     padding: 8px 15px;
     border-radius: 25px; /* Bordas mais arredondadas */
@@ -136,15 +136,21 @@ header p {
 .menu-item.whatsapp {
     background: transparent; /* Remove o fundo do botão do WhatsApp */
     padding: 0; /* Remove o padding para o ícone ficar alinhado */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 110px; /* Largura do botão do WhatsApp */
+    height: 45px; /* Altura do botão do WhatsApp */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .whatsapp-icon {
-    width: 110px; /* Tamanho do ícone do WhatsApp */
-    height: 45px;
+    width: 100%; /* O ícone ocupa toda a largura do botão */
+    height: 100%; /* O ícone ocupa toda a altura do botão */
     transition: transform 0.3s ease;
 }
 
-.whatsapp-icon:hover {
+.menu-item.whatsapp:hover .whatsapp-icon {
     transform: scale(1.1); /* Efeito de zoom no ícone */
 }
 
@@ -258,5 +264,10 @@ ul li:hover {
 
     .job h3 {
         font-size: 1.2rem;
+    }
+
+    .header-menu {
+        flex-direction: column;
+        gap: 10px;
     }
 }
